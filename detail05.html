@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자세히보기 🎊</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/detail05.css " />
+  </head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <div class="logo">
+      <a href="index.html" target="_self"
+        ><img src="assets/img/logow.png" alt="logo"
+      /></a>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="nowtest.html" target="_self">영화</a></li>
+        <li><a href="lumipick.html" target="_self">Lumi Pick</a></li>
+        <li><a href="#">Art Shop</a></li>
+        <li><a href="#">대관안내</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <img src="assets/img/search.png" alt="search" />
+      <input type="search" placeholder="" />
+    </div>
+  </header>
+  <!-- //header -->
+  <section class="section">
+    <div class="section1">
+      <div class="title">
+        <a href="index.html" target="_self"><img src="assets/img/leftarrow.png" alt="la" /></a>
+        <h2>현재 상영작</h2>
+      </div>
+      
+     
+  </div>
+  <div class="section2">
+      <div class="section2__left">
+          
+      </div>
+      <div class="section2__right">
+          <div class="top">
+              <div class="top1">
+                  <div class="top1__line1">
+                    <img src="assets/img/age15.png" alt="a15">
+                      <h2>소년시절의 너</h2>
+                      <p>Better Days</p>
+                     
+                  </div>
+                  <img class="nowshow" src="assets/img/nowshow.png" alt="nowshow">
+                  <div class="top1__line2">15세이상관람가 <br>2020.07.09 <br> 범죄·드라마·가족·독립예술·로맨스  135분</div>
+              </div>
+              <div class="top2">
+                  <div class="top2-1">
+                      <h4>줄거리</h4>
+                  <div class="top2__txt">
+                    시험만 잘 치면 멋진 인생을 살 수 있다고 가르치는 세상에서 기댈 곳 없이 세상에 내몰린 우등생 소녀 ‘첸니<br>엔’과 양아치 소년 ‘베이’. 비슷한 상처와 외로움에 끌려 서로에게 의지하게 된 두 사람은 수능을 하루 앞둔 어<br>느 날, ‘첸니엔’의 삶을 뒤바꿔버릴 거대한 사건에 휘말리게 된다. ‘첸니엔’만은 평범하고 행복하게 살길 바라는<br>‘베이’는 그녀의 그림자가 되어 모든 것을 해결하기로 마음 먹는데… “고마워. 내 세상의 전부, 소년시절의 너.”
+                  </div>
+                  </div>
+                  <div class="top2-2">
+                      <div class="top2-2__left">
+                        <h4>감독/출연</h4>
+                      <div class="top2__txt">
+                        감독 증국상<br>
+                        배우 주동우 이양천새
+                      </div>
+                      
+                      </div>
+                      <div class="top2-2__right">
+                        <h4>실관람객 평점</h4>
+                      <div class="top2__txt">
+                      루미너스 실관람객 156명 참여
+                      </div>
+                      <div class="core">9.08 / 10</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="video-box">
+            <iframe width="576" height="293" src="https://www.youtube.com/embed/WKeY_G3AD54?si=E9XK-UllHhNqAHNR&autoplay=1&mute=1&controls=0&loop=1&playlist=WKeY_G3AD54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <div class="bottom">
+              예매창 바로가기
+             
+              
+          </div>
+      </div>
+  </div>
+  </section>
+
+       <!-- cursor -->
+       <div class="cursor">
+        <div class="cursor__default">
+          <span class="cursor__default__inner"></span>
+        </div>
+        <div class="cursor__trace">
+          <span class="cursor__trace__inner"></span>
+        </div>
+      </div>
+  
+
+
+      <!-- jq -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        // 스크롤 트리거 플러그인 활성화
+        gsap.registerPlugin(ScrollTrigger);
+  
+        function SectionGroup__init() {
+          $(".section-group--horizontal-left").each(function (index, node) {
+            var $group = $(node);
+            var $section = $group.find(" > .section");
+  
+            gsap.to($section, {
+              xPercent: -100 * ($section.length - 1),
+              ease: "none",
+              scrollTrigger: {
+                trigger: $group,
+                start: "top top",
+                end: "+=" + ($section.length - 1) + "00%",
+                pin: true,
+                scrub: true,
+              },
+            });
+          });
+  
+          // $(".section-group--stack-up").each(function (index, node) {
+          //     var $group = $(node);
+          //     var $section = $group.find(" > .section:not(:first-child)");
+  
+          //     $section.each(function (index, node) {
+          //         var $sectionOne = $(node);
+  
+          //         gsap.to($sectionOne, {
+          //             ease: "none",
+          //             scrollTrigger: {
+          //                 trigger: $sectionOne,
+          //                 start: "top 100%",
+          //                 end: "bottom 100%",
+          //                 pin: $sectionOne.prev(),
+          //                 pinSpacing: false,
+          //                 scrub: true
+          //             }
+          //         });
+          //     });
+          // });
+        }
+  
+        SectionGroup__init();
+        document.addEventListener("DOMContentLoaded", function () {
+          document.addEventListener("mousemove", function (event) {
+            const cursorDefaultInner = document.querySelector(
+              ".cursor__default__inner"
+            );
+            const cursorTraceInner = document.querySelector(
+              ".cursor__trace__inner"
+            );
+  
+            cursorDefaultInner.style.left = event.clientX + "px";
+            cursorDefaultInner.style.top = event.clientY + "px";
+  
+            cursorTraceInner.style.left = event.clientX + "px";
+            cursorTraceInner.style.top = event.clientY + "px";
+          });
+  
+          const cursor = document.querySelector(".cursor");
+  
+          document.addEventListener("mousedown", function () {
+            cursor.classList.add("cursor--active");
+          });
+  
+          document.addEventListener("mouseup", function () {
+            cursor.classList.remove("cursor--active");
+          });
+  
+          function createRipple(e) {
+            let ripple = document.createElement("div");
+  
+            ripple.classList.add("ripple");
+  
+            cursor.appendChild(ripple);
+  
+            ripple.style.top = e.clientY - ripple.clientHeight / 2 + "px";
+            ripple.style.left = e.clientX - ripple.clientWidth / 2 + "px";
+          }
+  
+          document.addEventListener("click", function (e) {
+            createRipple(e);
+          });
+        });
+      </script>
+</body>

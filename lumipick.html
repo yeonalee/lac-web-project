@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>현재 상영작 🎊</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/lumipick.css " />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header">
+      <div class="logo">
+        <a href="index.html" target="_self"
+          ><img src="assets/img/logow.png" alt="logo"
+        /></a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="nowtest.html" target="_self">영화</a></li>
+          <li><a href="lumipick.html" target="_self">Lumi Pick</a></li>
+          <li><a href="#">Art Shop</a></li>
+          <li><a href="#">대관안내</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <img src="assets/img/search.png" alt="search" />
+        <input type="search" placeholder="" />
+      </div>
+    </header>
+    <!-- //header -->
+
+    <section class="section">
+      <div class="section1">
+        <div class="title">
+          <img src="assets/img/leftarrow.png" alt="la" />
+          <h2>Lumi Pick</h2>
+        </div>
+        <p>루미너스 아트 시네마가 추천하는 <span>‘Lumi Pick’</span> 작품</p>
+      </div>
+      <div class="section2">
+        <div class="pick1">
+          <img src="assets/img/redpick.png" alt="red" />
+          <div class="txt-box">
+            <p class="line1">현재상영중</p>
+            <div class="cont">
+              <ul class="cont1">
+                <li><a href="recommend.html" target="_self">추천 작품 보러가기</a></li>
+                <li><a href="#"><img src="assets/img/rightarrow.png" alt="ra"></a></li>
+              </ul>
+              <ul class="cont2">
+                <li><a href="#">예매하기</a></li>
+                <li><a href="#"><img src="assets/img/rightarrow.png" alt="ra"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pick2">
+          <img src="assets/img/whitepick.png" alt="white" />
+          <div class="txt-box">
+            <p class="line1">비상영 추천 영화</p>
+            <div class="cont">
+              <ul class="cont1">
+                <li><a href="#">추천 작품 보러가기</a></li>
+                <li><a href="#"><img src="assets/img/rightarrow.png" alt="ra"></a></li>
+              </ul>
+              <ul class="cont2">
+                <li><a href="#">VOD 살펴보기</a></li>
+                <li><a href="#"><img src="assets/img/rightarrow.png" alt="ra"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cursor -->
+    <div class="cursor">
+      <div class="cursor__default">
+        <span class="cursor__default__inner"></span>
+      </div>
+      <div class="cursor__trace">
+        <span class="cursor__trace__inner"></span>
+      </div>
+    </div>
+
+    <!-- jq -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // 스크롤 트리거 플러그인 활성화
+      gsap.registerPlugin(ScrollTrigger);
+
+      function SectionGroup__init() {
+        $(".section-group--horizontal-left").each(function (index, node) {
+          var $group = $(node);
+          var $section = $group.find(" > .section");
+
+          gsap.to($section, {
+            xPercent: -100 * ($section.length - 1),
+            ease: "none",
+            scrollTrigger: {
+              trigger: $group,
+              start: "top top",
+              end: "+=" + ($section.length - 1) + "00%",
+              pin: true,
+              scrub: true,
+            },
+          });
+        });
+
+        // $(".section-group--stack-up").each(function (index, node) {
+        //     var $group = $(node);
+        //     var $section = $group.find(" > .section:not(:first-child)");
+
+        //     $section.each(function (index, node) {
+        //         var $sectionOne = $(node);
+
+        //         gsap.to($sectionOne, {
+        //             ease: "none",
+        //             scrollTrigger: {
+        //                 trigger: $sectionOne,
+        //                 start: "top 100%",
+        //                 end: "bottom 100%",
+        //                 pin: $sectionOne.prev(),
+        //                 pinSpacing: false,
+        //                 scrub: true
+        //             }
+        //         });
+        //     });
+        // });
+      }
+
+      SectionGroup__init();
+      document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("mousemove", function (event) {
+          const cursorDefaultInner = document.querySelector(
+            ".cursor__default__inner"
+          );
+          const cursorTraceInner = document.querySelector(
+            ".cursor__trace__inner"
+          );
+
+          cursorDefaultInner.style.left = event.clientX + "px";
+          cursorDefaultInner.style.top = event.clientY + "px";
+
+          cursorTraceInner.style.left = event.clientX + "px";
+          cursorTraceInner.style.top = event.clientY + "px";
+        });
+
+        const cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousedown", function () {
+          cursor.classList.add("cursor--active");
+        });
+
+        document.addEventListener("mouseup", function () {
+          cursor.classList.remove("cursor--active");
+        });
+
+        function createRipple(e) {
+          let ripple = document.createElement("div");
+
+          ripple.classList.add("ripple");
+
+          cursor.appendChild(ripple);
+
+          ripple.style.top = e.clientY - ripple.clientHeight / 2 + "px";
+          ripple.style.left = e.clientX - ripple.clientWidth / 2 + "px";
+        }
+
+        document.addEventListener("click", function (e) {
+          createRipple(e);
+        });
+      });
+    </script>
+  </body>
+</html>

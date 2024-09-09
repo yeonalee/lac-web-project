@@ -1,0 +1,462 @@
+/* fonts */
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* common 시작 */
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+body {
+  background-color: #000;
+  font-family: "S-CoreDream-3Light";
+  font-weight: 300;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* common 끝 */
+
+/* custom 시작 */
+
+/* header 시작 */
+#header {
+  width: 109px;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  z-index: 100;
+}
+
+#header img {
+  width: 109px;
+  display: block;
+}
+/* header 끝 */
+
+/* section 시작 */
+.section {
+  min-height: 100vh;
+  display: flex;
+  /* align-items: start;
+  justify-content: center; */
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: -0.5rem;
+  /* border: 10px solid #fff; */
+  box-sizing: border-box;
+  background-color: #000;
+  position: relative;
+  color: #fff;
+}
+
+.section-group--horizontal-left > .section {
+  width: 100%;
+  flex-shrink: 0;
+  /*   flex-shrink : 0; 자기 영역을 절대 수축하지 않음.   */
+}
+
+.section-group--horizontal-left {
+  display: flex;
+}
+
+/* swiper 시작 */
+.swiper {
+  width: 1033px;
+  height: 1031px;
+  margin-bottom: 10%;
+  margin-left: 110px;
+}
+
+.swiper-slide {
+  width: 1033px;
+  height: 1031px;
+  background-color: #ae2622;
+}
+
+.slide-2,
+.slide-3,
+.slide-4 {
+  width: 1033px;
+  height: 1031px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-2 {
+  background-image: url(../img/poster2.png);
+}
+
+.slide-3 {
+  background-image: url(../img/tp.png);
+}
+
+.slide-4 {
+  background-image: url(../img/rp.png);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-pagination {
+  margin-bottom: 10%;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 1px;
+  background: transparent;
+  border: 1px solid #fff;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+  width: 40px;
+  transition: width 0.5s;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+.parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+
+.parallax__item__logo img {
+  width: 109px;
+  height: 294px;
+  margin-top: -20px;
+  margin-left: -10px;
+}
+
+.parallax__item__sliderWrap {
+  width: 1033px;
+  height: 1031px;
+  background-color: #ae2622;
+  margin: 25px 0;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box {
+  margin-left: 47px;
+  margin-top: 51px;
+  color: #fff;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box p {
+  font-size: 20px;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box h2 {
+  font-size: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box .insta_btn {
+  width: 66px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box .insta {
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box a {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box a:hover {
+  background-color: #fff;
+  color: #ae2622;
+}
+
+.parallax__item__sliderWrap .parallax__item__text-box a:hover img {
+  background-color: #ae2622;
+  border-radius: 6px;
+}
+
+.parallax__item__sliderWrap .parallax__item__img {
+  display: flex;
+}
+
+.parallax__item__sliderWrap .parallax__item__img > div {
+  width: 244px;
+  height: 353px;
+  margin: 0 10px;
+  margin-top: 220px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.parallax__item__sliderWrap .parallax__item__img > div:first-child {
+  margin-left: 0;
+}
+
+.parallax__item__sliderWrap .parallax__item__img > div:last-child {
+  margin-right: 0;
+}
+
+.parallax__item__sliderWrap .parallax__item__img > .i1 {
+  background-image: url(../img/i1.png);
+}
+
+.parallax__item__sliderWrap .parallax__item__img .i2 {
+  background-image: url(../img/i2.png);
+}
+
+.parallax__item__sliderWrap .parallax__item__img .i3 {
+  background-image: url(../img/i3.png);
+}
+
+.parallax__item__sliderWrap .parallax__item__img .i4 {
+  background-image: url(../img/i4.png);
+}
+/* swiper 끝 */
+
+/* parallax__item__box  시작 */
+.parallax__item__box {
+  display: flex;
+  align-items: start;
+  padding-right: 10%;
+}
+.parallax__item__box > div:hover {
+  transform: scale(1.025);
+}
+
+.parallax__item__box > div {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.parallax__item__box .parallax__item__box__cont:hover {
+  transform: scale(1.025);
+}
+
+.parallax__item__box .parallax__item__box__cont {
+  transition: all 1.5s;
+  width: 362.5px;
+  height: 382.5px;
+  background-color: #00000070;
+  padding-left: 28px;
+  padding-top: 109px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.parallax__item__box .parallax__item__box__cont .cont {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.185px;
+  margin-bottom: 50px;
+}
+
+.parallax__item__box .parallax__item__box__cont h3 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 200%; /* 100px */
+  letter-spacing: -0.615px;
+}
+
+.parallax__item__box .parallax__item__box__cont svg {
+  cursor: pointer;
+}
+
+.parallax__item__box__1 {
+  background-image: url(../img/s1.png);
+}
+
+.parallax__item__box__2 {
+  background-image: url(../img/s2.png);
+}
+
+.parallax__item__box__3 {
+  background-image: url(../img/art_shop.png);
+}
+
+.parallax__item__box__4 {
+  background-image: url(../img/cinfor.png);
+}
+
+.parallax__item__box__1 {
+  width: 603px;
+  height: 1031px;
+  margin: 25px 34px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax__item__box__2 {
+  width: 603px;
+  height: 1031px;
+  margin: 25px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax__item__box__3,
+.parallax__item__box__4 {
+  width: 603px;
+  height: 1031px;
+  margin: 25px 34px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax__cont {
+  overscroll-behavior: none;
+  width: 200%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* section--17 */
+.section--17 {
+  margin-left: -9.5%;
+}
+/* section--17 끝 */
+
+/* section18 */
+.section-group--horizontal-left > .section--18 {
+  width: 610px;
+  height: 1080px;
+  border: 1px solid red;
+}
+.section--18 {
+  /* align-items: start;
+  padding-top: 60px;
+  margin-left: 34px;
+   */
+}
+.section--18 img:first-child {
+  display: inline-block;
+  padding-bottom: 100px;
+}
+/* section18 끝 */
+
+/* parallax__item__box 끝 */
+
+/* cursor 시작 */
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.cursor__default__inner {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
+.cursor__trace__inner {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s;
+}
+
+.cursor--active .cursor__trace__inner {
+  transform: translate(-50%, -50%) scale(10);
+  transition: transform 0.3s;
+}
+
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: palevioletred;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripple 0.5s ease forwards;
+}
+
+@keyframes ripple {
+  to {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    opacity: 0;
+  }
+}
+/* cursor 끝 */
+/* section 끝 */
+/* custom 끝 */

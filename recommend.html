@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추천작품보러가기 🎊</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/recommend.css " />
+    <style>
+      .section2__left img {
+        width: 545px;
+        height: 754px;
+        object-fit: cover; /* 이미지가 비율에 맞게 잘리면서 꽉 채워짐 */
+      }
+
+      .section2__right .img-box img {
+        cursor: pointer;
+        width: 100px; /* 클릭할 이미지 크기 조정 */
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+     <!-- header -->
+     <header id="header">
+        <div class="logo">
+          <a href="index.html" target="_self"
+            ><img src="assets/img/logow.png" alt="logo"
+          /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="nowtest.html" target="_self">영화</a></li>
+            <li><a href="lumipick.html" target="_self">Lumi Pick</a></li>
+            <li><a href="#">Art Shop</a></li>
+            <li><a href="#">대관안내</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <img src="assets/img/search.png" alt="search" />
+          <input type="search" placeholder="" />
+        </div>
+      </header>
+      <!-- //header -->
+      <section class="section">
+        <div class="section1">
+            <div class="title">
+              <a href="index.html" target="_self"><img src="assets/img/leftarrow.png" alt="la" /></a>
+              <h2>Lumi Pick</h2>
+            </div>
+            <div class="btn">
+                <div class="btn1">
+                    상영중
+                </div>
+                <div class="btn2">
+                    비상영
+                </div>
+            </div>
+            <ul class="namebar">
+                <li><a href="#">한국이 싫어서</a></li>
+                <li class="active"><a href="#">퍼펙트 데이즈</a></li>
+                <li><a href="#">소년시절의 너</a></li>
+            </ul>
+        </div>
+        <div class="section2">
+            <div class="section2__left">
+                <img src="assets/img/recommendpick.png" alt="redpick2">
+            </div>
+            <div class="section2__right">
+                <div class="top">
+                    <div class="top1">
+                        <div class="top1__line1">
+                            <h2>퍼펙트 데이즈</h2>
+                            <p>Perfect Days</p>
+                        </div>
+                        <div class="top1__line2">15세이상관람가  2020.07.09  범죄,드라마,가족,독립예술,로맨스  135분</div>
+                    </div>
+                    <div class="top2">
+                        <div class="top2-1">
+                            <h4>줄거리</h4>
+                        <div class="top2__txt">
+                            이탈리아의 평야지대에서 꿀을 재배하는 가정의 장녀인 젤소미나가 어느 날 영<br>
+화를 찍는 현장을 접한다. 그녀는 다른 세계로의 열망을 갖게 되면서 동시에 <br>
+아버지와 갈등을 겪고 사랑을 확인한다.
+                        </div>
+                        </div>
+                        <div class="top2-2">
+                            <h4>실관람객 평점</h4>
+                        <div class="top2__txt">
+                            루미너스 실관람객 156명 참여
+                        </div>
+                        <div class="core">8.74 / 10</div>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <div class="bottom">
+                    <div class="bottom_title">
+                        <img src="assets/img/recommendwhite.png" alt="rw">
+                        <p>L:AC PICK</p>
+                    </div>
+                    <p class="txtbox">
+                        <p class="txttop">매일이 같은 삶을 사는 우리, 그저 자신의 삶을 온전히 살아가는 것</p>
+                        <p class="txtbottom">매일 매일 똑같은 루틴을 살고 있는 주인공의 모습을 보면서 나의 일상을 되돌아볼 수 있는 기회를 가질 수 있다는 점이 매우 흥<br> 미롭다. 사실 이 영화에 대한 정보를 미리 접하면서 어쩌면 꽤나 지루하지 않을까라는 생각이 들었지만 보면 볼수록 주인공의 삶<br> 속에 내가 들어간 듯한 느낌이 들면서 어느새 감정이입이 되어가는 것을 발견할 수 있을 것이다.</p>
+                    </p>
+                    <div class="img-box">
+                        <div class="img-box1">
+                            <img src="assets/img/rci1.png" alt="i1">
+                            <img src="assets/img/rci2.png" alt="i2">
+                        </div>
+                        <div class="img-box2">
+                            <img class="i3" src="assets/img/rci3.png" alt="i3">
+                            <img src="assets/img/rci4.png" alt="i4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      
+      
+      <!-- cursor -->
+    <div class="cursor">
+        <div class="cursor__default">
+          <span class="cursor__default__inner"></span>
+        </div>
+        <div class="cursor__trace">
+          <span class="cursor__trace__inner"></span>
+        </div>
+      </div>
+  
+
+
+      <!-- jq -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        // 스크롤 트리거 플러그인 활성화
+        gsap.registerPlugin(ScrollTrigger);
+  
+        function SectionGroup__init() {
+          $(".section-group--horizontal-left").each(function (index, node) {
+            var $group = $(node);
+            var $section = $group.find(" > .section");
+  
+            gsap.to($section, {
+              xPercent: -100 * ($section.length - 1),
+              ease: "none",
+              scrollTrigger: {
+                trigger: $group,
+                start: "top top",
+                end: "+=" + ($section.length - 1) + "00%",
+                pin: true,
+                scrub: true,
+              },
+            });
+          });
+  
+        
+        }
+  
+        SectionGroup__init();
+
+              
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document.addEventListener("mousemove", function (event) {
+            const cursorDefaultInner = document.querySelector(
+              ".cursor__default__inner"
+            );
+            const cursorTraceInner = document.querySelector(
+              ".cursor__trace__inner"
+            );
+  
+            cursorDefaultInner.style.left = event.clientX + "px";
+            cursorDefaultInner.style.top = event.clientY + "px";
+  
+            cursorTraceInner.style.left = event.clientX + "px";
+            cursorTraceInner.style.top = event.clientY + "px";
+          });
+  
+          const cursor = document.querySelector(".cursor");
+  
+          document.addEventListener("mousedown", function () {
+            cursor.classList.add("cursor--active");
+          });
+  
+          document.addEventListener("mouseup", function () {
+            cursor.classList.remove("cursor--active");
+          });
+  
+          function createRipple(e) {
+            let ripple = document.createElement("div");
+  
+            ripple.classList.add("ripple");
+  
+            cursor.appendChild(ripple);
+  
+            ripple.style.top = e.clientY - ripple.clientHeight / 2 + "px";
+            ripple.style.left = e.clientX - ripple.clientWidth / 2 + "px";
+          }
+  
+          document.addEventListener("click", function (e) {
+            createRipple(e);
+          });
+        });
+      </script>
+  </body>
